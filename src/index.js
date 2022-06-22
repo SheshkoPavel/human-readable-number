@@ -1,35 +1,14 @@
-// module.exports = function toReadable (number) {
-//     switch (number) {
-//         case 0 : return 'zero';
-//         case 1 : return 'one';
-//         case 2 : return 'two';
-//         case 3 : return 'three';
-//         case 4 : return 'four';
-//         case 5 : return 'five';
-//         case 6 : return 'six';
-//         case 7 : return 'seven';
-//         case 8 : return 'eight';
-//         case 9 : return 'nine';
-//         case 10 : return 'ten';
-
-//         default : return 'nothing to return';
-//     }
-
-// }
-
-function toR (n) {
-    let str = n.toString();
+module.exports = function toReadable (number) {
+    let str = number.toString();
     let newStr = '';
-    let arr = [];
     let arr1 = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     let arr2 = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
     let arr3 = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
     let arr4 = ['one hundred', 'two hundred', 'three hundred', 'four hundred', 'five hundred', 'six hundred', 'seven hundred', 'eight hundred', 'nine hundred'];
-    console.log(str.length);
 
     switch (str.length) {
         case 1 : {
-                switch (n) {
+                switch (number) {
                     case 0 : return 'zero'; 
                     case 1 : return 'one';
                     case 2 : return 'two';
@@ -43,8 +22,8 @@ function toR (n) {
                 }
             }; break; 
         case 2 : {
-            if (n < 20) {
-                switch (n) {
+            if (number < 20) {
+                switch (number) {
                     case 10 : return arr2[0];
                     case 11 : return arr2[1];
                     case 12 : return arr2[2];
@@ -149,5 +128,3 @@ function toR (n) {
     }
     
 }
-
-console.log(toR(199));
